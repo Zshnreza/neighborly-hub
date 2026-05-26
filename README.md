@@ -34,8 +34,8 @@ After pushing this project to GitHub:
 
 1. Open the repository on GitHub.
 2. Go to `Settings` -> `Pages`.
-3. Under `Build and deployment`, choose `Deploy from a branch`.
-4. Select branch `main` and folder `/root`.
+3. Under `Build and deployment`, choose `GitHub Actions` or `Deploy from a branch`.
+4. If using branch deploy, select branch `main` and folder `/root`.
 5. Save. GitHub will publish the app at a public `https://<username>.github.io/<repo>/` URL.
 
 ## Notes
