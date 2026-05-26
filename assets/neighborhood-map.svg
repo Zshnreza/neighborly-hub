@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 430" role="img" aria-labelledby="title desc">
+  <title id="title">Neighborhood activity map</title>
+  <desc id="desc">A stylized map of nearby blocks with markers for posts, alerts, and events.</desc>
+  <rect width="680" height="430" fill="#eef5f0"/>
+  <path d="M24 88h632M42 188h594M28 306h620" stroke="#cbd9d0" stroke-width="24" stroke-linecap="round"/>
+  <path d="M138 24v382M310 32v368M508 26v380" stroke="#d7e1db" stroke-width="28" stroke-linecap="round"/>
+  <path d="M64 132c88-68 168-72 246-12s174 46 306-42M54 358c112-58 206-54 282 12s158 62 288-8" fill="none" stroke="#b6c9bd" stroke-width="10" stroke-linecap="round"/>
+  <g fill="#fff" stroke="#93ad9e" stroke-width="3">
+    <rect x="78" y="44" width="88" height="58" rx="8"/>
+    <rect x="210" y="54" width="66" height="74" rx="8"/>
+    <rect x="378" y="52" width="88" height="64" rx="8"/>
+    <rect x="540" y="122" width="80" height="68" rx="8"/>
+    <rect x="90" y="220" width="94" height="70" rx="8"/>
+    <rect x="232" y="228" width="76" height="58" rx="8"/>
+    <rect x="378" y="220" width="112" height="76" rx="8"/>
+    <rect x="532" y="248" width="74" height="70" rx="8"/>
+    <rect x="110" y="332" width="118" height="54" rx="8"/>
+    <rect x="362" y="332" width="96" height="54" rx="8"/>
+  </g>
+  <g>
+    <circle cx="326" cy="198" r="58" fill="#147a5f" opacity=".14"/>
+    <circle cx="326" cy="198" r="14" fill="#147a5f"/>
+    <path d="M326 168v60M296 198h60" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <g fill="#ffb84c" stroke="#34240a" stroke-width="4">
+    <circle cx="168" cy="164" r="16"/>
+    <circle cx="520" cy="208" r="16"/>
+    <circle cx="432" cy="104" r="16"/>
+  </g>
+  <g fill="#c84630" stroke="#fff" stroke-width="4">
+    <path d="M574 74 552 112h44l-22-38Z"/>
+    <path d="M126 302 104 340h44l-22-38Z"/>
+  </g>
+  <g fill="#2f6f9f" stroke="#fff" stroke-width="4">
+    <circle cx="270" cy="334" r="15"/>
+    <circle cx="474" cy="354" r="15"/>
+  </g>
+  <path d="M40 36h94" stroke="#147a5f" stroke-width="8" stroke-linecap="round"/>
+  <path d="M40 54h58" stroke="#ffb84c" stroke-width="8" stroke-linecap="round"/>
+</svg>

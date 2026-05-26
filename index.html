@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neighborly Hub</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#feed" aria-label="Neighborly Hub home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" role="img">
+            <path d="M4 11.5 12 5l8 6.5v8a1.5 1.5 0 0 1-1.5 1.5H15v-6H9v6H5.5A1.5 1.5 0 0 1 4 19.5v-8Z" />
+            <path d="M8 11h8" />
+          </svg>
+        </span>
+        <span>Neighborly Hub</span>
+      </a>
+      <label class="search">
+        <span class="sr-only">Search neighborhood posts</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.35-4.35M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z" /></svg>
+        <input id="searchInput" type="search" placeholder="Search alerts, tools, events, neighbors..." />
+      </label>
+      <div class="topbar-actions">
+        <button class="icon-button" id="toggleTheme" type="button" aria-label="Toggle theme" title="Toggle theme">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.64 5.64l1.42 1.42M16.94 16.94l1.42 1.42M18.36 5.64l-1.42 1.42M7.06 16.94l-1.42 1.42" /><circle cx="12" cy="12" r="4" /></svg>
+        </button>
+        <button class="primary-button" id="openComposer" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+          Post
+        </button>
+      </div>
+    </header>
+
+    <main class="app-shell">
+      <aside class="sidebar" aria-label="Neighborhood navigation">
+        <section class="profile-panel">
+          <div class="avatar">ZR</div>
+          <div>
+            <strong>Zeeshan</strong>
+            <span>Maple Garden, 1.2 mi</span>
+          </div>
+        </section>
+        <nav class="nav-list">
+          <a href="#feed" class="active"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16M4 12h16M4 19h10" /></svg> Feed</a>
+          <a href="#market"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7Z" /><path d="M9 7a3 3 0 0 1 6 0" /></svg> Market</a>
+          <a href="#events"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v4M17 3v4M4 9h16M5 5h14v16H5z" /></svg> Events</a>
+          <a href="#safety"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.5 8 9 4.6-.5 8-4 8-9V6l-8-3Z" /></svg> Safety</a>
+          <a href="#ai"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v3M12 18v3M4.22 5.64l2.12 2.12M17.66 16.24l2.12 2.12M3 12h3M18 12h3M5.64 19.78l2.12-2.12M16.24 6.34l2.12-2.12" /><path d="M9 10.5h6M9 13.5h4" /></svg> AI</a>
+        </nav>
+        <section class="trust-panel">
+          <span class="status-dot"></span>
+          <div>
+            <strong>Verified neighborhood</strong>
+            <p>82% of nearby members have address or phone verification.</p>
+          </div>
+        </section>
+      </aside>
+
+      <section class="content" id="feed">
+        <div class="status-strip">
+          <div>
+            <span class="eyebrow">Today in Maple Garden</span>
+            <h1>Share updates, find help, and keep the block moving.</h1>
+          </div>
+          <div class="weather-chip">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v2M6.34 6.34l1.42 1.42M4 12h2M17.66 6.34l-1.42 1.42" /><path d="M8 16a4 4 0 1 1 7.8-1.2A3 3 0 1 1 17 21H8a2.5 2.5 0 1 1 0-5Z" /></svg>
+            <span>32°C, clear</span>
+          </div>
+        </div>
+
+        <div class="quick-actions" aria-label="Quick post categories">
+          <button class="quick-card" data-quick="Lost & Found"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M8 14a6 6 0 1 1 8 0c-1 .8-1.5 1.8-1.5 3h-5c0-1.2-.5-2.2-1.5-3Z" /></svg><span>Lost & Found</span></button>
+          <button class="quick-card" data-quick="Ask for Help"><svg viewBox="0 0 24 24"><path d="M8 11h8M12 7v8" /><path d="M21 12a9 9 0 1 1-4.7-7.9" /></svg><span>Ask for Help</span></button>
+          <button class="quick-card" data-quick="Sell or Give Away"><svg viewBox="0 0 24 24"><path d="M20 12v8H4v-8M22 7H2v5h20zM12 7v13M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7Zm0 0h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7Z" /></svg><span>Give Away</span></button>
+          <button class="quick-card alert" data-quick="Safety Alert"><svg viewBox="0 0 24 24"><path d="M12 9v4M12 17h.01" /><path d="M10.3 4.3 2.7 18a2 2 0 0 0 1.7 3h15.2a2 2 0 0 0 1.7-3L13.7 4.3a2 2 0 0 0-3.4 0Z" /></svg><span>Safety Alert</span></button>
+        </div>
+
+        <div class="toolbar">
+          <div class="segmented" role="tablist" aria-label="Filter feed">
+            <button class="active" data-filter="all" type="button">All</button>
+            <button data-filter="alert" type="button">Alerts</button>
+            <button data-filter="help" type="button">Help</button>
+            <button data-filter="market" type="button">Market</button>
+            <button data-filter="event" type="button">Events</button>
+          </div>
+          <select id="sortSelect" aria-label="Sort posts">
+            <option value="recent">Newest first</option>
+            <option value="popular">Most active</option>
+            <option value="nearby">Closest first</option>
+          </select>
+        </div>
+
+        <section class="feed-list" id="feedList" aria-live="polite"></section>
+      </section>
+
+      <aside class="right-rail">
+        <section class="map-panel" id="market">
+          <div class="panel-heading">
+            <span class="eyebrow">Live Radius</span>
+            <strong>Nearby activity</strong>
+          </div>
+          <img src="assets/neighborhood-map.svg" alt="Stylized neighborhood map with active areas" />
+          <div class="map-stats">
+            <span><strong>14</strong> alerts</span>
+            <span><strong>27</strong> offers</span>
+            <span><strong>9</strong> events</span>
+          </div>
+        </section>
+
+        <section class="panel" id="events">
+          <div class="panel-heading">
+            <span class="eyebrow">This Week</span>
+            <strong>Events</strong>
+          </div>
+          <div class="event-row">
+            <time datetime="2026-05-29">May 29</time>
+            <span>Street cleanup and chai meetup</span>
+            <button data-rsvp="Street cleanup" type="button">RSVP</button>
+          </div>
+          <div class="event-row">
+            <time datetime="2026-06-01">Jun 1</time>
+            <span>Apartment solar Q&A</span>
+            <button data-rsvp="Solar Q&A" type="button">RSVP</button>
+          </div>
+        </section>
+
+        <section class="panel safety-panel" id="safety">
+          <div class="panel-heading">
+            <span class="eyebrow">Safety Center</span>
+            <strong>Broadcast an alert</strong>
+          </div>
+          <textarea id="alertText" rows="4" placeholder="Describe what happened, where, and whether help is needed."></textarea>
+          <button class="danger-button" id="sendAlert" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 9v4M12 17h.01" /><path d="M10.3 4.3 2.7 18a2 2 0 0 0 1.7 3h15.2a2 2 0 0 0 1.7-3L13.7 4.3a2 2 0 0 0-3.4 0Z" /></svg>
+            Send Alert
+          </button>
+        </section>
+
+        <section class="panel ai-panel" id="ai">
+          <div class="panel-heading">
+            <span class="eyebrow">AI Feature</span>
+            <strong>Neighborhood AI Copilot</strong>
+          </div>
+          <label class="compact-label" for="aiIntent">What do you want to say?</label>
+          <textarea id="aiIntent" rows="4" placeholder="Example: I need a ladder tomorrow morning and can return it by evening."></textarea>
+          <div class="ai-controls">
+            <label class="compact-label" for="aiTone">Tone</label>
+            <select id="aiTone">
+              <option value="friendly">Friendly</option>
+              <option value="urgent">Urgent</option>
+              <option value="formal">Formal</option>
+              <option value="short">Short</option>
+            </select>
+          </div>
+          <div class="ai-actions">
+            <button class="secondary-button" id="draftPost" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4l10.5-10.5a2.8 2.8 0 0 0-4-4L4 16v4Z" /><path d="m13.5 6.5 4 4" /></svg>
+              Draft
+            </button>
+            <button class="secondary-button" id="improvePost" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 9.8 8.6 4 11l5.8 2.4L12 19l2.2-5.6L20 11l-5.8-2.4L12 3Z" /></svg>
+              Improve
+            </button>
+          </div>
+          <div class="ai-insights" aria-label="AI analysis">
+            <span id="aiCategory">Category: Help</span>
+            <span id="aiUrgency">Urgency: Normal</span>
+            <span id="aiTags">Tags: Neighbor post</span>
+          </div>
+          <p id="conciergeOutput" class="draft-output">AI draft and neighborhood safety notes will appear here.</p>
+          <button class="primary-button fill-button" id="useAiDraft" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+            Use in Post
+          </button>
+        </section>
+      </aside>
+    </main>
+
+    <dialog id="composer">
+      <form method="dialog" class="composer-form">
+        <div class="dialog-heading">
+          <div>
+            <span class="eyebrow">New neighborhood post</span>
+            <h2>What should neighbors know?</h2>
+          </div>
+          <button class="icon-button" value="cancel" type="submit" aria-label="Close composer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12" /></svg>
+          </button>
+        </div>
+        <label>
+          Category
+          <select id="postCategory">
+            <option value="help">Ask for Help</option>
+            <option value="alert">Safety Alert</option>
+            <option value="market">Sell or Give Away</option>
+            <option value="event">Event</option>
+          </select>
+        </label>
+        <label>
+          Title
+          <input id="postTitle" type="text" maxlength="80" placeholder="Short, clear headline" />
+        </label>
+        <label>
+          Details
+          <textarea id="postBody" rows="5" maxlength="420" placeholder="Add helpful context, timing, and location."></textarea>
+        </label>
+        <div class="form-grid">
+          <label>
+            Distance
+            <input id="postDistance" type="number" min="0" max="10" step="0.1" value="0.4" />
+          </label>
+          <label>
+            Visibility
+            <select id="postVisibility">
+              <option>Nearby verified neighbors</option>
+              <option>My street only</option>
+              <option>Entire neighborhood</option>
+            </select>
+          </label>
+        </div>
+        <menu>
+          <button class="secondary-button" value="cancel" type="submit">Cancel</button>
+          <button class="primary-button" id="publishPost" value="default" type="button">Publish</button>
+        </menu>
+      </form>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
