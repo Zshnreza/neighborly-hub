@@ -1,3 +1,4 @@
+
 # Neighborly Hub
 
 Neighborly Hub is a responsive Nextdoor-style neighborhood app prototype for local updates, help requests, safety alerts, events, and marketplace posts.
